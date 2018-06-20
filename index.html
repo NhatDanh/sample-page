@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lab6-2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+        *,
+        html {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        table{
+            font-weight: bold;
+        }
+        #parent1,
+        #parent2,
+        #parent3,
+        #parent4 {
+            border-spacing: 0;
+        }
+
+        #parent1 {
+            border: 1px solid green;
+            margin: 40px auto;
+        }
+
+        .td-p1 {
+            border-right: 1px solid green;
+        }
+
+        .tr-p1 td {
+            border-bottom: 1px solid green;
+            background-color: #35e05b;
+            color: white;
+        }
+
+        .scale-p4 td {
+            padding: 0;
+            margin: 0;
+            border-bottom: 1px solid green;
+        }
+
+        .type-p4 td {
+            border-bottom: none;
+            width: 100px;
+        }
+
+        .type-p4 td:nth-child(1),
+        .type-p4 td:nth-child(2),
+        .type-p4 td:nth-child(3) {
+            border-right: 1px solid green;
+        }
+        .date td {
+            border-bottom: 1px solid green;
+            background-color: #a9f2b9;
+        }
+
+        .date-center {
+            text-align: center;
+        }
+
+        #parent2 tr td,
+        #parent3 tr td,
+        #parent4 tr td {
+            text-align: center;
+        }
+
+        /* .td-p1-ex td{
+            border: none;
+        } */
+
+        .r-h-child {
+            border-right: 1px solid green;
+        }
+
+        .row-height td {
+            height: 10px;
+            width: 100px;
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+        }
+        .r-h-ch-ex{
+            border-bottom: 1px solid green;
+        }
+        .continent td{
+            border-bottom: 1px solid green;
+            width: 200px;
+        }
+        #parent2, #parent3{
+            width: 200px;
+            height: 100px;
+        }
+        .continent-2-child{
+            border-right: 1px solid green;
+            width: 100px;
+        }
+        #parent4{
+            width: 300px;
+        }
+        .color-red{
+            color: red;
+        }
+        .align{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="parent1">
+        <tbody>
+            <tr class="tr-p1">
+                <td rowspan="1" class="td-p1 align">Thời gian</td>
+                <td rowspan="1" colspan="3" class="td-p1 align">Trận đấu</td>
+                <td colspan="4" class="td-p1">
+                    <table id="parent4">
+                        <tbody>
+                            <tr class="td-p1-ex scale-p4">
+                                <td colspan="4">Tỷ lệ</td>
+                            </tr>
+                            <tr class="td-p1-ex type-p4">
+                                <td>Loại</td>
+                                <td>Chủ</td>
+                                <td>Tỷ lệ/Hòa</td>
+                                <td>Khách</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td class="td-p1 align">Trực tiếp</td>
+            </tr>
+            <tr class="date date-center">
+                <td colspan="9">Vòng 37 (13/05/2017 - 15/05/2017)</td>
+            </tr>
+            <tr class="date date-ex">
+                <td colspan="9">Ngày 13/05/2017</td>
+            </tr>
+            <tr class="row-height">
+                <td class="r-h-child r-h-ch-ex color-red">
+                    <div>21:00</div>
+                    <div>FT</div>
+                </td>
+                <td class="r-h-child r-h-ch-ex">
+                    <div>
+                        <img src="img/6c43ca9d-70c2-4c0f-8797-8250befa7207.png">
+                    </div>
+                    <div>Espanyol</div>
+                </td>
+                <td class="r-h-child r-h-ch-ex color-red">0-1</td>
+                <td class="r-h-child r-h-ch-ex">
+                    <div>
+                        <img src="img/images.jpg">
+                    </div>
+                    <div>Granada</div>
+                </td>
+                <td class="td-table r-h-child r-h-ch-ex">
+                    <table id="parent2" class="td-table">
+                        <tbody>
+                            <tr class="continent">
+                                <td class="continent-2-child">Châu Á</td>
+                                <td class="continent-2-child"></td>
+                                <td class="continent-2-child"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="continent-2-child">Châu Âu</td>
+                                <td class="continent-2-child"></td>
+                                <td class="continent-2-child"></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td class="r-h-ch-ex color-red" colspan="4">K+PC</td>
+            </tr>
+            <tr class="row-height">
+                <td class="r-h-child color-red">
+                    <div>21:00</div>
+                    <div>FT</div>
+                </td>
+                <td class="r-h-child">
+                    <div>
+                        <img src="img/Logo Osasuna.png">
+                    </div>
+                    <div>Espanyol</div>
+                </td>
+                <td class="r-h-child color-red">2-1</td>
+                <td class="r-h-child">
+                    <div>
+                        <img src="img/584ad13db519ea740933a897.png">
+                    </div>
+                    <div>Granada</div>
+                </td>
+                <td class="td-table r-h-child">
+                    <table id="parent3" class="td-table">
+                        <tbody>
+                            <tr class="continent">
+                                <td class="continent-2-child">Châu Á</td>
+                                <td class="continent-2-child"></td>
+                                <td class="continent-2-child"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="continent-2-child">Châu Âu</td>
+                                <td class="continent-2-child"></td>
+                                <td class="continent-2-child"></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td colspan="4" class="color-red">K+NS</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
